@@ -3,6 +3,5 @@ str ← "abcde"
 goal ← "cdeab"
 goal2 ← "abced"
 
-shifts ← (1⊸⌽⍟(↕≠)str)
-•Show (≠shifts)>(⊑shifts⊐<goal)
-(≠shifts)>(⊑shifts⊐<goal2)
+str (1⊸≤)∘((1⊸⌽⍟(↕≠))⊸(+´∘∊)) ⋈goal
+#(1⊸⌽⍟(↕≠)str) is shifting str 0 through len(str)-1
